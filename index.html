@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Contact form</title>
+</head>
+<body>
+    <div class="contact">
+        <div class="contact-information">
+            
+            <h3 class="contact-information-title">Contact information</h3>
+            <p class="contact-information-text">Fill up form and our Team will get back to you in 24 hours.</p>
+            
+            <div class="contact-credentials">
+                <p><i class="fa-solid fa-phone"></i>+0123 456 78910</p>
+                <p><i class="fa-solid fa-envelope"></i>johndoe@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i>102 Street 2714 Don</p>
+            </div>
+
+            <div class="social-media">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="circle"></div>
+        </div>
+        
+            <form method="POST" action="./php/index.php" class="contact-form">
+                <div class="contact-form-user-credentials">
+                    <label class="label">
+                        First Name
+                        <input name="first-name" class="user-credentials-input input" type="text" placeholder="John" required>
+                    </label>
+                    <label class="label">
+                        Last Name
+                        <input name="last-name" class="user-credentials-input input" type="text" placeholder="Doe" required>
+                    </label>
+                    <label class="label">
+                        Mail
+                        <input name="email" list="email" class="user-credentials-input input email" type="email" placeholder="johndoe@gmail.com" minlength="3" required>
+                        <div class="email-error error"></div>
+                    </label>
+                    <datalist id="email">
+                        <option value="johndoe@gmail.com"></option>
+                    </datalist>
+                    <label class="label">
+                        Phone
+                        <input name="phone-number" list="phoneNumber" class="user-credentials-input input phone-number" type="tel" placeholder="123456789" pattern="[0-9]{4-12}" minlength="4" maxlength="12" required>
+                        <div class="phone-error error"></div>
+                    </label>
+                    <datalist id="phone-number">
+                        <option value="123456789"></option>
+                    </datalist>                  
+                </div>
+                <div class="user-type-of-website">
+                    <h4 class="user-type-of-website-title">What website do you need ?</h4>
+                    <div class="user-type-of-website-choice">
+                        <label>
+                            <input type="radio" name="choice" checked value="web design">
+                            Web Design
+                        </label>
+                        <label>
+                            <input type="radio" name="choice" value="web development">
+                            Web development
+                        </label>
+                        <label>
+                            <input type="radio" name="choice" value="logo design">
+                            Logo Design
+                        </label>
+                        <label>
+                            <input type="radio" name="choice" value="logo">
+                            Logo
+                        </label>
+                    </div>
+                    <label class="label">
+                        Message
+                        <input name="message" type="text" placeholder="Write your message" class="input message" required>
+                    </label>
+                </div>
+                <input type="submit" value="Send Message" class="submit-btn" name="submit-btn">
+            </form>
+        </div>
+    <script src="./js/script.js"></script>
+    <script src="https://kit.fontawesome.com/7a9690bba4.js" crossorigin="anonymous"></script>
+</body>
+</html>
